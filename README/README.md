@@ -6,7 +6,7 @@
 
 Over-normalization was observed as all three stain normalization methods generated nearly uniform-colored images or lost most of the original features (**figure 1**). This effects may be due to bad selection of reference image, or the method being too aggressive. Therefore, I proceeded without stain normalization in subsequent analysis.
 
-![**Figure 1.** Stain normalized images using different algorithms and choices of target images (image 0 and 42 in the training data). Randomly display normalized results of 2 images from training set, indexed as 1 and 30.](README/01_stain_norm.png)
+![**Figure 1.** Stain normalized images using different algorithms and choices of target images (image 0 and 42 in the training data). Randomly display normalized results of 2 images from training set, indexed as 1 and 30.](plots/01_stain_norm.png)
 
 **Figure 1.** Stain normalized images using different algorithms and choices of target images (image 0 and 42 in the training data). Randomly display normalized results of 2 images from training set, indexed as 1 and 30.
 
@@ -38,13 +38,13 @@ Other details of the model setup include:
 
 Total loss for both training and test sets over epoch is displayed in **figure 2**. Since the number of epoch was small, the loss was still decreasing in both training and validation sets at the last epoch, suggesting additional epochs is needed for training to optimize hyperparameters and further improve model performance.
 
-![**Figure 2.** Change of total loss over epoch in training and validation sets](README/image.png)
+![**Figure 2.** Change of total loss over epoch in training and validation sets](plots/image.png)
 
 **Figure 2.** Change of total loss over epoch in training and validation sets
 
 Model performance is evaluated in the test set by IoU, mAP (mean Average Precision) and Dice in **figure 3**. Specifically, IoU measures the boundary accuracy, Dice checks for pixel-level accuracy, and mAP (mean Average Precision) is good for evaluation of object-level correctness. Higher values for all three metrics indicate better prediction. As expected, checkpoints in later epochs achieved higher IoU and mAP as they are better optimized. However, the Dice score remained 1 across all epochs, likely due to incorrect settings rather than true model performance (**figure 3**).
 
-![**Figure 3.** Model performance in test set evaluated by IoU, mAP and Dice over epoch](README/image%201.png)
+![**Figure 3.** Model performance in test set evaluated by IoU, mAP and Dice over epoch](plots/image%201.png)
 
 **Figure 3.** Model performance in test set evaluated by IoU, mAP and Dice over epoch
 
